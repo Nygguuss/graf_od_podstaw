@@ -31,6 +31,8 @@ namespace graf_od_podstaw
             miejcowosci.dodaj_miejscowosci(4, "Przełęk");
 
             miejcowosci.wyswietl_miejscowosci();
+            Trasy_i_Polaczenia trasy_i_polaczenia = new Trasy_i_Polaczenia(graf,miejcowosci);
+            trasy_i_polaczenia.WszystkieDostepneTrasy();
             Console.ReadLine();
         }
     }

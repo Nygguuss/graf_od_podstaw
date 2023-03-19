@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using graf_od_podstaw.Klasy;
 
 namespace graf_od_podstaw.Klasy
 {
@@ -23,6 +24,11 @@ namespace graf_od_podstaw.Klasy
             {
                 Console.WriteLine("Numer: {0}, Miejsce: {1}", item.Key, item.Value);
             }
+        }
+
+        public int LiczbaMiejscowosci()
+        {
+            return this.Miejsca.Count;
         }
 
         public string PobierzMiejscowosc(int indeks)

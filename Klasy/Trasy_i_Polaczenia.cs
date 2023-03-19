@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using graf_od_podstaw.Klasy;
 
 namespace graf_od_podstaw.Klasy
 {
@@ -14,52 +15,19 @@ namespace graf_od_podstaw.Klasy
             graf = g;
             miejscowosci = m;
         }
-        //wyświetla dostępne miejscowości zależne od grafu oraz od miejscowości które dodajemy w Programie.cs
-        public void WyswietlDostepneMiejscowosci(int wierzcholek)
+        public void WszystkieDostepneTrasy()
         {
-            Console.Write("Dostępne miejscowości dla wierzchołka {0}: ", wierzcholek);
-            for (int i = 0; i < graf.WielkoscX; i++)
+            for (int i = 0; i < miejscowosci.LiczbaMiejscowosci(); i++)
             {
-                if (graf.PobierzWartoscM(wierzcholek, i) == 1)
+                for (int j = i + 1; j < miejscowosci.LiczbaMiejscowosci(); j++)
                 {
-                    Console.Write("{0}, ", miejscowosci.PobierzMiejscowosc(i));
+                    if (graf.PobierzWartoscM(i, j) == 1)
+                    {
+                        Console.WriteLine("Możliwe połączenie: {0} - {1}", miejscowosci.PobierzMiejscowosc(i), miejscowosci.PobierzMiejscowosc(j));
+                    }
                 }
             }
-            Console.WriteLine();
+
         }
-
-        public void WyswietlTrasy()
-        {
-            List<string> trasy = new List<string>();
-            bool[] odwiedzone = new bool[graf.WielkoscX];
-            DFS(0, "", odwiedzone, trasy);
-            Console.WriteLine("Dostępne trasy:");
-            foreach (string trasa in trasy)
-            {
-                Console.WriteLine(trasa);
-            }
-        }
-        //Do zrobienia wyszukiwana trasa |NIE WYWOŁYWAĆ|
-        private void DFS(int wierzcholek, string trasa, bool[] odwiedzone, List<string> trasy)
-        {
-            odwiedzone[wierzcholek] = true;
-            trasa += miejscowosci.PobierzMiejscowosc(wierzcholek) + " -> ";
-            for (int i = 0; i < graf.WielkoscX; i++)
-            {
-                if (graf.PobierzWartoscM(wierzcholek, i) == 1 && !odwiedzone[i])
-                {
-                    DFS(i, trasa, odwiedzone, trasy);
-                }
-            }
-            if (graf.WezSasiadow(wierzcholek).Count() == 0) // koniec trasy
-            {
-                trasa = trasa.Remove(trasa.Length - 4); // usunięcie ostatnich 4 znaków (" -> ")
-                trasy.Add(trasa);
-            }
-            odwiedzone[wierzcholek] = false;
-        }
-
-
-
     }
 }
