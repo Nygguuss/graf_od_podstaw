@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Klasy\Algorytm_Wyszukiwania_Trasy.cs" />
     <Compile Include="Klasy\Graf.cs" />
-    <Compile Include="Klasy\Logika_Tras_i_Polaczen.cs" />
+    <Compile Include="Klasy\Trasy_i_Polaczenia.cs" />
     <Compile Include="Klasy\Miejcowosci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

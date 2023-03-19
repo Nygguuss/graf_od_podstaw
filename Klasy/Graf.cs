@@ -39,6 +39,20 @@ namespace graf_od_podstaw.Klasy
             get { return macierz.GetLength(0); }
         }
 
+        public List<int> WezSasiadow(int wierzcholek)
+        {
+            var sasiedzi = new List<int>();
+            for (int i = 0; i < macierz.GetLength(1); i++)
+            {
+                if (macierz[wierzcholek, i] == 1)
+                {
+                    sasiedzi.Add(i);
+                }
+            }
+            return sasiedzi;
+        }
+
+
     }
 }
 
