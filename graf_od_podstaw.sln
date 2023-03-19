@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graf_od_podstaw", "graf_od_podstaw.csproj", "{7F1E7FCB-1F90-4823-B9E9-43E84ABEBE69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F1E7FCB-1F90-4823-B9E9-43E84ABEBE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F1E7FCB-1F90-4823-B9E9-43E84ABEBE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F1E7FCB-1F90-4823-B9E9-43E84ABEBE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F1E7FCB-1F90-4823-B9E9-43E84ABEBE69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5B952E4-2B15-4B4C-AC53-31B13BF94DFD}
+	EndGlobalSection
+EndGlobal
