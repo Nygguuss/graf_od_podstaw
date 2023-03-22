@@ -10,6 +10,5 @@ namespace graf_od_podstaw.Klasy
     class Algorytm_Wyszukiwania_Trasy
     {
 
-
     }
 }
