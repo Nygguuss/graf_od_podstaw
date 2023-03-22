@@ -15,19 +15,24 @@ namespace graf_od_podstaw.Klasy
             graf = g;
             miejscowosci = m;
         }
+        //wyszukuje wszsystkie dostepne trasy 
         public void WszystkieDostepneTrasy()
         {
             for (int i = 0; i < miejscowosci.LiczbaMiejscowosci(); i++)
             {
-                for (int j = i + 1; j < miejscowosci.LiczbaMiejscowosci(); j++)
+                for (int j = 0; j < miejscowosci.LiczbaMiejscowosci(); j++)
                 {
                     if (graf.PobierzWartoscM(i, j) == 1)
                     {
                         Console.WriteLine("Możliwe połączenie: {0} - {1}", miejscowosci.PobierzMiejscowosc(i), miejscowosci.PobierzMiejscowosc(j));
                     }
+                    else if (graf.PobierzWartoscM(j, i) == 1)
+                    {
+                        Console.WriteLine("Możliwe połączenie: {0} - {1}", miejscowosci.PobierzMiejscowosc(j), miejscowosci.PobierzMiejscowosc(i));
+                    }
                 }
             }
-
         }
+
     }
 }
